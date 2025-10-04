@@ -23,7 +23,7 @@ double inner_product(const double *a,const double *b, int n)//Function to get th
     return sum;//returns our sum var to func call
 }
 
-void fillArrays(double *a,double *b,int n)//fills the array with random values using the rand func
+void fill_arrays(double *a,double *b,int n)//fills the array with random values using the rand func
 {
     printf("A      B  \n");//prints col headers
     const double *flag = a+(n-1);//initalizes and declares a pointer to the last item in our array used as sentinal value for our loop
@@ -43,7 +43,7 @@ int main(void)
     double arrayB[Array_Length];//declares the B array with a size defined by our Array_length const
     double sum = 0;//declars and intializes our sum var that will store the total calculated value
     
-    fillArrays(&arrayA[0],&arrayB[0],Array_Length);//function call to our fillArrays func
+    fill_arrays(&arrayA[0],&arrayB[0],Array_Length);//function call to our fillArrays func
     sum = inner_product(&arrayA[0],&arrayB[0],Array_Length);//function call to our inner_product func
     printf("\n%.2f",sum);//displays the total sum to the user
 
