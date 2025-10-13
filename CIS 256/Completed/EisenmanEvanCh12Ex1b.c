@@ -9,7 +9,7 @@
 #define Array_Len 50//macro that sets the max length the input of the char array
 
 //func that takes an array pointer and the max length of the array and fills it with the users input
-//returns the amount of characters the user enterd as a int
+//returns the amount of characters the user entered as a int
 int fill_array(char *inputArray,int arrayLength)
 {
     char *arrayEnd = inputArray+(arrayLength-1);//declares and intializes a pointer to the end of the array
