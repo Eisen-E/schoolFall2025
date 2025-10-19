@@ -13,50 +13,26 @@ userValZ SDWORD 0 ;Z Value for our math equation
 
 .code
 main PROC
-	call Clrscr
-	
-	;Part one moves myMessage into the EDX register and calls the write string function from irvine32
-	mov	 edx,OFFSET myMessage
-	call WriteString
-	
-	;Part two calls the dump regs function 
-	call DumpRegs
-	
-	;Part three and extra credit calls the readint func three times and calculates a value based off the user input
-	mov  edx,OFFSET myPrompt ;prompts the user to enter their values
-	call WriteString
-	mov  al,10
-	call WriteChar
+	mov edx,10
+	mov eax,10
+	mov ebx,10
+	mov ecx,5
 
-	;displays x and wait for the users input and stores it
-	mov  al,"X"
-	call WriteChar
-	call ReadInt
-	mov userValX,eax
-	
-	;displays Y and wait for the users input and stores it
-	mov  al,"Y"
-	call WriteChar
-	call ReadInt
-	mov userValY,eax
-	
-	;displays Z and wait for the users input and stores it
-	mov  al,"Z"
-	call WriteChar
-	call ReadInt
-	mov userValZ,eax
-
-	;moves the x val to the eax reg and evaluates based of the two other variables we created
-	mov eax,userValX
-	add eax,userValY
-	sub eax,userValZ
-	
-	;displays a message to the user displaying the value of equation with the given vars
-	mov  edx,OFFSET finalPrompt ;prompts the user to enter their values
-	call WriteString
-	call WriteDec
-	;Assignment asked for another call to dump regs for the basic math portion but not the extra credit added it to be safe
-	call DumpRegs
+	cmp edx,eax
+	ja final
+	cmp ebx,ecx
+	ja T1
+	jmp T2
+	T1: cmp ebx,edx
+	ja final
+	jmp T2
+	final:
+	mov edi,1
+	mov userValX,edi
+	exit
+	T2:	
+	mov edi,2
+	mov userValX,edi
 	exit
 main ENDP
 
