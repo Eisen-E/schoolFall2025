@@ -3,7 +3,7 @@
 //Chapter 19 exercise 1
 //Displays a menu to the user and uses an interface to manipulate a queue
 #include <stdio.h>
-#include "C:\Users\monke\OneDrive\Desktop\GitHub\schoolFall2025\CIS 256\queue.h"
+#include "queue.h"
 
 //macro for user prompt
 #define PROMPT "Press (1) to insert an integer item to the end of the queue\nPress (2) to remove an integer item from the beginning of the queue\nPress (3) to display the first item in the queue\nPress (4) to display the last item in the queue\nPress (5) to display the count of items in the queue\nPress (6) to quit\n"

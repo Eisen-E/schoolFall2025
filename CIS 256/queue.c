@@ -3,17 +3,19 @@
 //Chapter 19 exercise 1
 //Displays a menu to the user and uses an interface to manipulate a queue
 //this file contains the implementations of the interface
-#include <stdio.h>
-#include "C:\Users\monke\OneDrive\Desktop\GitHub\schoolFall2025\CIS 256\queue.h"
-#define QUEUE_SIZE 100
 
-static int last=0;
-static int queue[QUEUE_SIZE]={0};
+#include <stdio.h>//includes the stio lib for the printf func
+#include "queue.h"//inlcudes our header with the func prototypes
 
-static void queue_shift(void)
+#define QUEUE_SIZE 100 //macro to set queue size
+
+static int last=0;//var that will store the total amount of items in the stack
+static int queue[QUEUE_SIZE]={0};//creates our stack as an array of ints
+
+static void queue_shift(void)//private function that will shift the stack over one
 {
-    int queueCounter = 1;
-    if(last == 1)
+    int queueCounter = 1;//sets counter to one
+    if(last == 1)//checks if there is only one item in the stack if it is it just sets it to zero
     {
         queue[0]=0;
     }
@@ -26,6 +28,7 @@ static void queue_shift(void)
         while(queueCounter < last)
         {
             queue[queueCounter-1]= queue[queueCounter];
+            queueCounter++;
         }
         queue[last] = 0;
     }

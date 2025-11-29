@@ -9,7 +9,8 @@
                 "/EHsc",
                 "/nologo",
                 "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "${file}"
+                "${file}",
+                "C:\\Users\\monke\\OneDrive\\Desktop\\GitHub\\schoolFall2025\\CIS 256\\queue.c"
             ],
             "options": {
                 "cwd": "${fileDirname}"
