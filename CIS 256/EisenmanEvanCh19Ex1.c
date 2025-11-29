@@ -11,9 +11,9 @@
 int main(void)
 {
     int userChoice;//holds the int of the current user selection
-    int userVal;
+    int userVal;//holds the int of the current user input into the queue
     printf(PROMPT);//prints a prompt
-    scanf(" %d",&userChoice);//gets userchoice
+    scanf(" %d",&userChoice);//gets the users menu choice
     while (userChoice !=6)//exits loop if user enters 6
     {
         //if else stament to control user selection
@@ -25,18 +25,22 @@ int main(void)
         }
         else if (userChoice == 2)
         {
+            //calls the printf with a call to the queue_remove func as the 2nd argument that will return the value removed from the queue
             printf("%d was removed from the queue!\n",queue_remove());
         }
         else if (userChoice == 3)
         {
+            //calls the printf with a call to the get_queue_item func as the 2nd argument that will return the value of the item at the current index in this case 0
             printf("%d is the first item in the queue!\n",get_queue_item(0));
         }
         else if (userChoice == 4)
         {
+            //calls the printf with a call to the get_queue_item func as the 2nd argument that will return the value of the item at the current index in this case we call queue_count to get the toatal amount of items and subtract 1 to get its index
             printf("%d is the last item in the queue!\n",get_queue_item(queue_count()-1));
         }
         else if (userChoice == 5)
         {
+            //calls the printf with a call to the queue_count func as the 2nd argument that will return the value of the total amount of items stored in the queue
             printf("There are a total of %d items in the queue!\n",queue_count());
         }
         else{printf("Incorrect selection please retry");}
