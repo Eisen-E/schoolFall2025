@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
@@ -24,7 +24,7 @@
               "RelativeDocumentMoniker": "main.asm",
               "ToolTip": "C:\\Users\\monke\\OneDrive\\Desktop\\GitHub\\schoolFall2025\\CIS 250\\Project_sample\\main.asm",
               "RelativeToolTip": "main.asm",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-09-13T23:03:17.21Z",
               "EditorCaption": ""
